@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+/* 
+わからないー！
+2.3.4body編 
+style.css 161行目
+.price_wrap table trは消しても画面変わらない
+padding効いてない
+必要？？？？？？
+*/
+
+/* ------ HEADER ------ */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 50;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #888;
+  opacity: 0.9;
+  padding: 20px 70px;
+}
+
+nav ul li {
+  font-size: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  border-bottom: solid 2px #fff;
+}
+
+/* ------ MAIN ------ */
+#top {
+  height: 600px;
+  background-image: url(../img/top.png); /*,linear-gradient(#0bd,#fff) 具合悪い人になる*/
+  background-size: cover;
+}
+
+.top_wrap h1 {
+  font-size: 30px;
+  color: #fff;
+  background-color: #007;
+  padding: 20px 50px;
+  float: right;
+  margin: 200px 275px 275px;
+}
+
+.top_wrap h2 {
+  float: right;
+  position: absolute;
+  top: 360px;
+  right: 340px;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: #37667a 0px 5px 5px;
+  /* margin: 200px 275px 175px; */ /*だめ*/
+}
+
+.top_wrap h2 a {
+  font-size: 20px;
+  color: #75d6fe;
+  text-decoration: none;
+}
+
+.top_wrap h2 a:hover {
+  border-bottom: 2px solid #75d6fe;
+}
+
+.top_wrap h2:active {
+  box-shadow: none;
+  top: 365px;
+}
+
+/* SERVICE */
+#service {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.section_title {
+  font-size: 40px;
+  color: #75d5ff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service_wrap {
+  display: flex;
+  align-items: center; /*flexアイテムのx軸位置*/
+  justify-content: center; /*flexアイテムのy軸位置*/
+}
+
+.service_left img {
+  width: 80%;
+  height: auto;
+}
+
+.service_right {
+  border: dashed 3px #75d5ff;
+  padding: 20px;
+}
+
+.service_right h3 {
+  color: #75d5ff;
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.service_right p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* NEWS */
+#news {
+  width: 80%;
+  margin: 100px auto;
+}
+/* .news_wrap {
+  max-width: 450px; /*これしたらtext-align効かない*/
+/* margin: 0 auto;
+} */
+
+.news_wrap {
+  height: 5.5em;
+  overflow: auto;
+  max-width: 450px;
+  min-height: 150px;
+  margin: 0 auto;
+  border: 5px solid #75d5ff;
+}
+
+.news_wrap p {
+  line-height: 2.5;
+  border-bottom: rgb(241, 241, 241) solid 1px;
+}
+
+/* PRICE */
+#price {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.price_wrap table {
+  border: double #75d5ff 10px;
+  width: 100%;
+  text-align: center; /*tdが行の中心に移動した*/
+}
+
+.price_wrap tr {
+  border: solid #75d5ff 2px; /* 横線 変わらん？？*/
+  padding: 10px; /*変わらん？？*/
+}
+
+.price_wrap table th {
+  border: solid #75d5ff 2px;
+  padding: 10px;
+}
+
+.price_wrap table td {
+  border: solid #75d5ff;
+  padding: 10px;
+}
+
+/* NEW ARRIVAL */
+#arrival {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.arrival_wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item img {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.item img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.item p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.no1 {
+  position: relative;
+}
+
+.item p:nth-child(4) {
+  /*.commentで指定できなかった？？*/
+  font-size: 18px;
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+
+/* CONTACT */
+#contact {
+  background: rgb(241, 241, 241);
+}
+
+#contact h2 {
+  padding: 40px 0;
+}
+
+.form {
+  width: 70%; /*#contactに適用したら背景色に余白ができる*/
+  margin: 0 auto;
+}
+
+label {
+  display: inline-block; /* inputと横並びのまま幅調節できる */
+  width: 30%;
+  line-height: 2;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  border: solid #ddd 1px;
+  width: 65%;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 6px; /*枠線と文字の間 heightは枠自体の高さ*/
+}
+
+textarea {
+  vertical-align: top;
+  height: 200px;
+}
+
+.button_submit {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 50px;
+  background-color: #555;
+  margin: 50px 0;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+.button:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+/* ------ footer ------ */
+#footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
